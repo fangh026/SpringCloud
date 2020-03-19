@@ -1,4 +1,4 @@
-package com.springcloud.com;
+package com.springcloud.service;
 
 import com.springcloud.dao.PaymentDao;
 import com.springcloud.entities.Payment;
