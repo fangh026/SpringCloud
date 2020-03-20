@@ -13,9 +13,14 @@
         <module name="cloud-provider-payment8004" />
         <module name="cloud-provider-payment8002" />
         <module name="cloud-provider-payment8001" />
-        <module name="cloud-consumer-zk-order80" />
         <module name="cloud-consumer-order80" />
+        <module name="cloud-provider-consul-payment8006" />
+        <module name="cloud-consumer-zookeeper-order80" />
+        <module name="cloud-consumer-consul-order80" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-consumer-zk-order80" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
