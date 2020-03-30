@@ -1,0 +1,16 @@
+server:
+  port: 81
+
+eureka:
+  client:
+    register-with-eureka: true #禁止自己当做服务注册
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+spring:
+  application:
+    name: cloud-hystrix-order
+
+feign:
+  hystrix:
+    enabled: true

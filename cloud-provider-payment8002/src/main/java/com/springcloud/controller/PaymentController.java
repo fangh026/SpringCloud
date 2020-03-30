@@ -47,7 +47,7 @@ public class PaymentController {
             return new CommonResult(444,"查询数据库失败,查询ID： "+id,null);
         }
     }
-
+    @GetMapping("/discovery")
     public Object discovery(){
         List<String> services = discoveryClient.getServices();
         for (String element : services) {
@@ -57,11 +57,16 @@ public class PaymentController {
         for (ServiceInstance instance : instances) {
             log.info(instance.getServiceId()+"\t"+instance.getHost()+"\t"+instance.getPort()+"\t"+instance.getUri());
         }
-        return discoveryClient;
+        return this.discoveryClient;
     }
 
     @GetMapping("/lb")
     public String getPaymentLB(){
         return serverPort;
+    }
+
+    @GetMapping("/zipkin")
+    public String paymentZipkin(){
+        return "玛卡巴卡，呜啦啦: {}"+serverPort;
     }
 }
